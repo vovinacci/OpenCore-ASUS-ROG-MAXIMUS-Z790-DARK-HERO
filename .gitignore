@@ -1,0 +1,30 @@
+### direnv ###
+.direnv
+.envrc
+
+### JetBrains
+.idea
+*.iml
+
+### Vim
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
+
+# OpenCore sample configuration file
+Sample.plist
+
+# Generated EFI folder and artifacts
+EFI
+EFI*.tar.gz
+EFI*.zip
+
+# OpenCore configuration validation utility
+ocvalidate
