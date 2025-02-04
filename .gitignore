@@ -1,30 +1,27 @@
-### direnv ###
-.direnv
-.envrc
-
-### JetBrains
+## Heavily simplified version of https://github.com/github/gitignore/blob/297239c101dcfdfae7e75757ed17ed993df0b4eb/Global/JetBrains.gitignore
 .idea
-*.iml
 
-### Vim
-# swap
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-# session
+# File-based project format
+*.iws
+
+
+## https://github.com/github/gitignore/blob/297239c101dcfdfae7e75757ed17ed993df0b4eb/Global/Vim.gitignore
+# Swap
+[._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
 Session.vim
-# temporary
+Sessionx.vim
+
+# Temporary
 .netrwhist
 *~
-# auto-generated tag files
+# Auto-generated tag files
 tags
-
-# OpenCore sample configuration file
-Sample.plist
-
-# Generated EFI folder and artifacts
-EFI
-EFI*.tar.gz
-EFI*.zip
-
-# OpenCore configuration validation utility
-ocvalidate
+# Persistent undo
+[._]*.un~
