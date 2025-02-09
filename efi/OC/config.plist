@@ -369,7 +369,7 @@
 				<key>BundlePath</key>
 				<string>SMCRadeonSensors.kext</string>
 				<key>Comment</key>
-				<string></string>
+				<string>AMD GPU temperature monitoring.</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>

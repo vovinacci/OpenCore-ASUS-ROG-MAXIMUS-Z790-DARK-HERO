@@ -34,7 +34,12 @@ jobs:
 
       - name: Print installed software versions
         run: |
+          # Extend PATH to always use Homebrew supplied utilities first.
+          export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
+          declare -p PATH
+
           set -x
+          bash --version
           bats --version
           parallel --version
           shellcheck --version
@@ -50,5 +55,7 @@ jobs:
 
       - name: Run tests
         run: |
-          #make test
+          # Extend PATH to always use Homebrew supplied utilities first.
+          export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
+          declare -p PATH
           ./build.sh

@@ -1,3 +1,5 @@
+# Common
+brew "bash"
 # Lint
 brew 'shellcheck'
 brew "shfmt"
