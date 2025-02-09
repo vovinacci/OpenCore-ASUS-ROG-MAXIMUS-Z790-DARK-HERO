@@ -52,10 +52,14 @@ declare -a EXPECTED_PATHS=(
   # Top-level folders/files
   "out/EFI"
   "out/EFI/BOOT"
+  "out/EFI/BOOT/.contentFlavour"
+  "out/EFI/BOOT/.contentVisibility"
   "out/EFI/BOOT/BOOTx64.efi"
 
   # OC root
   "out/EFI/OC"
+  "out/EFI/OC/.contentFlavour"
+  "out/EFI/OC/.contentVisibility"
   "out/EFI/OC/OpenCore.efi"
   "out/EFI/OC/config.plist"
 
@@ -107,6 +111,11 @@ declare -a EXPECTED_PATHS=(
   "out/EFI/OC/Tools/OpenControl.efi"
   "out/EFI/OC/Tools/OpenShell.efi"
   "out/EFI/OC/Tools/ResetSystem.efi"
+  "out/EFI/OC/Tools/mt86"
+  "out/EFI/OC/Tools/mt86/blacklist.cfg"
+  "out/EFI/OC/Tools/mt86/mt86.efi"
+  "out/EFI/OC/Tools/mt86/mt86.png"
+  "out/EFI/OC/Tools/mt86/unifont.bin"
 )
 
 @test "Build script runs successfully in default (RELEASE) mode" {

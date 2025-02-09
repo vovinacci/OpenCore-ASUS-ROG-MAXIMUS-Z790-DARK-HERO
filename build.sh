@@ -3,6 +3,7 @@
 # build.sh: Script to download OpenCore, Kexts, etc. and create EFI folder.
 
 set -euo pipefail
+shopt -s dotglob
 
 # realpath is bundled in macOS Sequoia 15.2 (24C101) (Darwin 24.2.0),
 # may need 'brew install coreutils' on older macOS versions.
@@ -55,7 +56,6 @@ readonly BIN_DIR
 TMP_DIR="$(mktemp -d)"
 readonly TMP_DIR
 # Keep environment clean
-trap 'run-on-trap $?' EXIT SIGHUP SIGINT SIGQUIT SIGPIPE SIGTERM
 function run-on-trap() {
   log_info "Removing temporary directory '${TMP_DIR}'..."
   rm -rf "${TMP_DIR}"
@@ -64,6 +64,7 @@ function run-on-trap() {
     rm -rf "${BUILD_DIR}"
   fi
 }
+trap 'run-on-trap $?' EXIT SIGHUP SIGINT SIGQUIT SIGPIPE SIGTERM
 log_info "Using temporary directory: ${TMP_DIR}"
 
 # Download from URL and unzip contents to the destination folder.
@@ -95,6 +96,29 @@ function download_and_copy_kext() {
   cp ${CP_OPTS} -r "${kext_tmp_dir}/${kext_name}.kext" "${KEXTS_DIR}/"
 }
 
+# Download and copy MemTest86
+# Globals
+#   BUILD_DIR
+#   MEMTEST_URL
+#   TMP_DIR
+function download_and_copy_memtest() {
+  download_and_unzip "${MEMTEST_URL}" "${TMP_DIR}/MemTest86"
+
+  local -r img_file="${TMP_DIR}/MemTest86/memtest86-usb.img"
+  if [[ ! -f "$img_file" ]]; then
+    log_fail "$img_file not found after unzipping."
+  fi
+
+  log_info "Mounting $img_file"
+  local -r mount_point="${TMP_DIR}/MemTest86/img"
+  hdiutil attach -quiet -readonly -noautoopen -mountpoint "${mount_point}" "${img_file}"
+  trap 'log_info "Unmounting ${img_file}"; hdiutil detach -quiet "${mount_point}"' RETURN
+
+  log_info "Copying files from mounted volume: ${mount_point}"
+  cp ${CP_OPTS} "${mount_point}/EFI/BOOT/BOOTX64.efi" "${BUILD_DIR}/OC/Tools/mt86/mt86.efi"
+  cp ${CP_OPTS} "${mount_point}/EFI/BOOT/"{blacklist.cfg,mt86.png,unifont.bin} "${BUILD_DIR}/OC/Tools/mt86/"
+}
+
 # Start the ball
 log_info "Create base OpenCore folder structure and binary folder"
 dirs=(
@@ -102,7 +126,7 @@ dirs=(
   "${BUILD_DIR}/OC/ACPI"
   "${BUILD_DIR}/OC/Drivers"
   "${BUILD_DIR}/OC/Kexts"
-  "${BUILD_DIR}/OC/Tools"
+  "${BUILD_DIR}/OC/Tools/mt86"
   "${BUILD_DIR}/OC/Resources/Audio"
   "${BUILD_DIR}/OC/Resources/Font"
   "${BUILD_DIR}/OC/Resources/Image"
@@ -116,8 +140,8 @@ done
 
 log_info "Download OpenCore and copy essential binaries"
 download_and_unzip "${OPENCORE_URL}" "${TMP_DIR}/OpenCorePkg"
-cp ${CP_OPTS} "${TMP_DIR}/OpenCorePkg/X64/EFI/BOOT/"{.*,*} "${BUILD_DIR}/BOOT/"
-cp ${CP_OPTS} "${TMP_DIR}/OpenCorePkg/X64/EFI/OC/"{.*,OpenCore.efi} "${BUILD_DIR}/OC/"
+cp ${CP_OPTS} "${TMP_DIR}/OpenCorePkg/X64/EFI/BOOT/"* "${BUILD_DIR}/BOOT/"
+cp ${CP_OPTS} "${TMP_DIR}/OpenCorePkg/X64/EFI/OC/"{.content*,OpenCore.efi} "${BUILD_DIR}/OC/"
 cp ${CP_OPTS} "${TMP_DIR}/OpenCorePkg/X64/EFI/OC/Drivers/"{AudioDxe,CrScreenshotDxe,OpenCanopy,OpenLinuxBoot,OpenRuntime,ResetNvramEntry,ToggleSipEntry}.efi \
   "${BUILD_DIR}/OC/Drivers/"
 cp ${CP_OPTS} "${TMP_DIR}/OpenCorePkg/X64/EFI/OC/Tools/"{CleanNvram,OpenControl,OpenShell,ResetSystem}.efi "${BUILD_DIR}/OC/Tools/"
@@ -157,6 +181,9 @@ log_info "Copying hardware-specific items (ACPI, custom kexts, config.plist temp
 cp ${CP_OPTS} -r "${BASE_DIR}/efi/OC/ACPI/"*.aml "${BUILD_DIR}/OC/ACPI/"
 cp ${CP_OPTS} -r "${BASE_DIR}/efi/OC/Kexts/"*.kext "${KEXTS_DIR}/"
 cp ${CP_OPTS} "${BASE_DIR}/efi/OC/config.plist" "${BUILD_DIR}/OC/"
+
+log_info "Download and copy MemTest86 to Tools folder"
+download_and_copy_memtest
 
 # TODO(vovinacci): Do a placeholder replacements in config.plist if needed
 # awk -v boardsn="$BOARDSERIAL" \

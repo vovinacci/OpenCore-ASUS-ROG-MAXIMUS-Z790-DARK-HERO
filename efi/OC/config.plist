@@ -683,7 +683,7 @@
 				<key>Arguments</key>
 				<string></string>
 				<key>Auxiliary</key>
-				<false/>
+				<true/>
 				<key>Comment</key>
 				<string>Reset NVRAM bundled as a standalone tool.</string>
 				<key>Enabled</key>
@@ -705,7 +705,7 @@
 				<key>Arguments</key>
 				<string></string>
 				<key>Auxiliary</key>
-				<false/>
+				<true/>
 				<key>Comment</key>
 				<string>Unlock and lock back NVRAM protection for other tools to be able to get full NVRAM access when launching from OpenCore.</string>
 				<key>Enabled</key>
@@ -727,7 +727,7 @@
 				<key>Arguments</key>
 				<string></string>
 				<key>Auxiliary</key>
-				<false/>
+				<true/>
 				<key>Comment</key>
 				<string>OpenCore-configured UEFI Shell for compatibility with a broad range of firmware.</string>
 				<key>Enabled</key>
@@ -762,6 +762,28 @@
 				<string>System shutdown</string>
 				<key>Path</key>
 				<string>ResetSystem.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Comment</key>
+				<string>Memory testing utility.</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>FullNvramAccess</key>
+				<false/>
+				<key>Name</key>
+				<string>MemTest86</string>
+				<key>Path</key>
+				<string>mt86/mt86.efi</string>
 				<key>RealPath</key>
 				<false/>
 				<key>TextMode</key>
