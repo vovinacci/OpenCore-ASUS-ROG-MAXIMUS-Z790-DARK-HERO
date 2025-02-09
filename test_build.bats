@@ -141,7 +141,7 @@ declare -a EXPECTED_PATHS=(
   export BIN_DIR="$THIS_TEST_BIN_DIR"
   export BUILD_DIR="$THIS_TEST_BUILD_DIR"
   export DEBUG=true
-  export EFI_VARIANT=DEBUG
+  export EFI_VARIANT=DeBuG # Mix casing is intentional to test value sanitisation
   run ./build.sh
 
   [ "$status" -eq 0 ]

@@ -29,6 +29,7 @@ log_info "DEBUG mode: ${DEBUG}"
 
 # Use release or debug variant
 EFI_VARIANT=${EFI_VARIANT:-RELEASE}
+EFI_VARIANT=${EFI_VARIANT^^}
 readonly EFI_VARIANT
 if ! [[ $EFI_VARIANT =~ ^(DEBUG|RELEASE)$ ]]; then
   log_fail "Unsupported EFI package variant: ${EFI_VARIANT}. Must be either DEBUG or RELEASE."
