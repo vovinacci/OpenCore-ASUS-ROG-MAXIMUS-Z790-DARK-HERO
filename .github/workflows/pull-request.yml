@@ -55,7 +55,5 @@ jobs:
 
       - name: Run tests
         run: |
-          # Extend PATH to always use Homebrew supplied utilities first.
           export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
-          declare -p PATH
-          ./build.sh
+          make test
