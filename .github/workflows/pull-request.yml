@@ -26,7 +26,7 @@ jobs:
           brew --version
           curl --version
           make --version
-          unzip --version
+          unzip -v
 
       - name: Homebrew install packages
         run: |
