@@ -46,7 +46,7 @@ jobs:
 
       - name: Run extra linters
         run: |
-          find "${CURDIR}" -name '*.plist' -print0 | xargs -0 -t -n1 plutil -lint
+          find . -name '*.plist' -print0 | xargs -0 -t -n1 plutil -lint
 
       - name: Run tests
         run: |
