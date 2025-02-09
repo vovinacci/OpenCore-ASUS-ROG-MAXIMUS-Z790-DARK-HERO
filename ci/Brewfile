@@ -1,0 +1,7 @@
+# Lint
+brew 'shellcheck'
+brew "shfmt"
+brew 'yamllint'
+# Bats
+brew 'parallel', conflicts_with: ["moreutils"]
+brew 'bats-core'

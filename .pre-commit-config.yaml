@@ -18,6 +18,17 @@ repos:
     rev: v0.44.0
     hooks:
       - id: markdownlint
+  # Shell linting and formatting
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0
+    hooks:
+      - id: shellcheck
+        args:
+          - "--external-sources"
+      - id: shfmt
+        args:
+          - "-i 2"
+          - "-ci"
   # YAML linting
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.35.1
