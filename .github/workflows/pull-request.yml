@@ -10,5 +10,50 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Cache Homebrew
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Caches/Homebrew
+          key: ${{ runner.os }}-homebrew-${{ hashFiles('./ci/Brewfile') }}
+          restore-keys: |
+            ${{ runner.os }}-homebrew-
+
+      - name: Print versions
+        run: |
+          set -x
+          bash --version
+          brew --prefix
+          brew --version
+          curl --version
+          make --version
+          unzip -v
+
+      - name: Homebrew install packages
+        run: |
+          brew bundle --file ./ci/Brewfile
+
+      - name: Print installed software versions
+        run: |
+          # Extend PATH to always use Homebrew supplied utilities first.
+          export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
+          declare -p PATH
+
+          set -x
+          bash --version
+          bats --version
+          parallel --version
+          shellcheck --version
+          shfmt --version
+          yamllint --version
+
       - name: Pre-commit checks
         uses: pre-commit/action@v3.0.1
+
+      - name: Run extra linters
+        run: |
+          find . -name '*.plist' -print0 | xargs -0 -t -n1 plutil -lint
+
+      - name: Run tests
+        run: |
+          export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
+          make test
