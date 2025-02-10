@@ -1,0 +1,3 @@
+# OpenCore configuration
+
+TODO
