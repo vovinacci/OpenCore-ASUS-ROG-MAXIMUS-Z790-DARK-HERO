@@ -22,7 +22,7 @@ Please refer to [OpenCore configuration](docs/opencore.md) and [BIOS settings](d
 
 ## Contributing
 
-Please refer to [Contribution guide](docs/contribution.md) for the reference.
+Please refer to [contribution guide](docs/contribution.md) for the reference.
 
 ## Code of Conduct
 
