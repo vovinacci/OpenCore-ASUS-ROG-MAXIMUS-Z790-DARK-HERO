@@ -1,6 +1,6 @@
 # OpenCore configuration
 
-You may find great installation guide [here](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/).
+You may find a great installation guide [here](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/).
 
 - [Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 - [OpenCanopy](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)
@@ -67,7 +67,7 @@ Resulting [USBMap.kext](../efi/OC/Kexts/USBMap.kext) is used.
 ### Tools
 
 - OpenCore
-  - `CleanNvram.efi` - Reset NVRAM alternative bundled as a standalone tool.
+  - `CleanNvram.efi` - Reset NVRAM alternative, bundled as a standalone tool.
   - `OpenControl.efi` - Unlock and lock back NVRAM protection for other tools to be able to get full NVRAM access when launching from OpenCore.
   - `OpenShell.efi` - OpenCore-configured UEFI Shell for compatibility with a broad range of firmware.
   - `ResetSystem.efi` - Utility to perform system reset.
