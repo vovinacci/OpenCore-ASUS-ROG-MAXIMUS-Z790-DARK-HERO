@@ -52,8 +52,8 @@ Resulting [USBMap.kext](../efi/OC/Kexts/USBMap.kext) is used.
 - [AppleALC](https://github.com/acidanthera/AppleALC) - Native macOS HD audio for not officially supported codecs.
 - [CPUFriend](https://github.com/acidanthera/CPUFriend) - Dynamic macOS CPU power management data injection.
 - [Lilu](https://github.com/acidanthera/Lilu) - Arbitrary kext and process patching on macOS.
-- [NVMeFix](https://github.com/acidanthera/NVMeFix) - Set of patches for the Apple NVMe storage driver `IONVMeFamily`, in order to improve compatibility with
-  non-Apple SSDs.
+- [NVMeFix](https://github.com/acidanthera/NVMeFix) - Set of patches for the Apple NVMe storage driver `IONVMeFamily` to improve compatibility with non-Apple
+  SSDs.
 - [RestrictEvents](https://github.com/acidanthera/RestrictEvents) - Lilu Kernel extension for blocking unwanted processes causing compatibility issues.
 - [SMCRadeonSensors](https://github.com/ChefKissInc/SMCRadeonSensors) - AMD GPU temperature monitoring on macOS.
 - [VirtualSMC](https://github.com/acidanthera/VirtualSMC) (`SMCProcessor.kext`, `SMCSuperIO.kext` and `VirtualSMC.kext`)

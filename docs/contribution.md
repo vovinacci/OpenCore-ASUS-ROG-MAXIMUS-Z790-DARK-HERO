@@ -9,7 +9,7 @@ This document provides guidelines for contributing to the toolkit.
 3. Send a pull request with your changes.
 4. A maintainer will review the pull request and make comments.
 
-   Prefer adding additional commits over amending and force-pushing since it can be difficult to follow code reviews when the commit history changes.
+   Prefer adding additional commits over amending and force-pushing, since it can be difficult to follow code reviews when the commit history changes.
 
    Commits will be squashed when they're merged.
 
@@ -36,7 +36,7 @@ To generate an EFI folder in `out/EFI`, run:
 - DEBUG variant: `make debug`
 - RELEASE variant: `make release`
 
-Once done, follow [replace placeholders](#replace-placeholders), mount EFI partition and copy `out/EFI` folder there.
+Once done, follow [replace placeholders](#replace-placeholders), mount the EFI partition and copy the `out/EFI` folder there.
 
 ## Replace placeholders
 
@@ -44,8 +44,8 @@ Two things to be done manually before moving everything to the actual EFI partit
 
 - Replace `{{ SERIAL }}`, `{{ BOARDSERIAL }}` and `{{ SMUUID }}` with actual values in `out/EFI/OC/config.plist`.
 
-  If you don't have one, great example on how to do this could be found
+  If you don't have one, a great example of how to do this could be found
   [here](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html).
-- Replace `{{ MACADDRESS }}` with actual `en0` MAC address value in `out/EFI/OC/config.plist`.
+- Replace `{{ MACADDRESS }}` with the actual `en0` MAC address value in `out/EFI/OC/config.plist`.
 
   Another great example on how to do it is [here](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#fixing-en0).

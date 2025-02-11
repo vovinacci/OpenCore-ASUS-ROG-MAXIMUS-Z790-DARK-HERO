@@ -7,7 +7,7 @@ Currently running [macOS Sequoia](https://www.apple.com/macos/macos-sequoia/) `1
 
 ## Usage
 
-- Download `EFI` folder as tarball or zip archive from [releases page](/releases).
+- Download `EFI` folder as tarball or zip archive from [releases page](https://github.com/vovinacci/OpenCore-ASUS-ROG-MAXIMUS-Z790-DARK-HERO/releases).
 - Unarchive downloaded file locally, and change directory there.
 - Follow [replace placeholders](docs/contribution.md#replace-placeholders) section.
 - Once done, mount EFI partition and copy `EFI` folder there.
