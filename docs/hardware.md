@@ -24,7 +24,7 @@ Original hardware selection based on
 | Keyboard                  | [Logitech MX KEYS S Wireless/Wired/Bluetooth Standard Keyboard](https://pcpartpicker.com/product/vvRwrH/logitech-mx-keys-s-wirelesswiredbluetooth-standard-keyboard-920-011406)                                                       |
 | Mouse                     | [Logitech MX Anywhere 3S Bluetooth/Wireless/Wired Laser Mouse](https://pcpartpicker.com/product/3VP8TW/logitech-mx-anywhere-3s-bluetoothwirelesswired-laser-mouse-910-006925)                                                         |
 
-This build on [PCPartPicker](https://pcpartpicker.com/list/mrY8b2).
+View this build on [PCPartPicker](https://pcpartpicker.com/list/mrY8b2).
 
 Other
 

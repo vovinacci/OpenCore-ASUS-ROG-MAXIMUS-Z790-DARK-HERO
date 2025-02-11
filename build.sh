@@ -202,7 +202,9 @@ download_and_copy_memtest
 # mv ${MV_OPTS} "${BUILD_DIR}/OC/config.plist.tmp" "${BUILD_DIR}/OC/config.plist"
 
 log_info "Validating OpenCore ${OPENCORE_VERSION} configuration"
-"${BIN_DIR}/ocvalidate" "${BUILD_DIR}/OC/config.plist"
+if ! "${BIN_DIR}/ocvalidate" "${BUILD_DIR}/OC/config.plist"; then
+  log_fail "OpenCore configuration validation failed"
+fi
 
 log_info "Build complete. Final EFI folder at: ${BUILD_DIR}"
 

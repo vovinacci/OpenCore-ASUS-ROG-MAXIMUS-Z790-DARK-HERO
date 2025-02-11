@@ -29,8 +29,10 @@ test: clean  ## Run tests
 
 .PHONY: release
 release:  ## Create RELEASE EFI variant
-    @EFI_VARIANT=RELEASE ./build.sh
+	$(PRINT_TARGET)
+	@EFI_VARIANT=RELEASE ./build.sh
 
 .PHONY: debug
 debug:  ## Create DEBUG EFI variant
-    @EFI_VARIANT=DEBUG ./build.sh
+	$(PRINT_TARGET)
+	@EFI_VARIANT=DEBUG ./build.sh
