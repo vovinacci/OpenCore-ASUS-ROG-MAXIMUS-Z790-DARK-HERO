@@ -70,6 +70,7 @@ log_info "Using temporary directory: ${TMP_DIR}"
 
 # Download from URL and unzip contents to the destination folder.
 # Globals:
+#   MKDIR_OPTS
 #   TMP_DIR
 function download_and_unzip() {
   local -r url="$1"
@@ -80,12 +81,15 @@ function download_and_unzip() {
 
   log_info "Unzipping to: $dest"
   mkdir ${MKDIR_OPTS} -p "${dest}"
-  unzip -q "${TMP_DIR}/archive.zip" -d "${dest}"
+  if ! unzip -q "${TMP_DIR}/archive.zip" -d "${dest}"; then
+    log_fail "Failed to unzip archive from: $url"
+  fi
   rm ${RM_OPTS} -f "${TMP_DIR}/archive.zip"
 }
 
 # Download and copy Kexts to KEXTS_DIR
 # Globals
+#   CP_OPTS
 #   KEXTS_DIR
 function download_and_copy_kext() {
   local kext_url="$1"
@@ -100,6 +104,7 @@ function download_and_copy_kext() {
 # Download and copy MemTest86
 # Globals
 #   BUILD_DIR
+#   CP_OPTS
 #   MEMTEST_URL
 #   TMP_DIR
 function download_and_copy_memtest() {
