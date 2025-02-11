@@ -66,8 +66,6 @@ Resulting [USBMap.kext](../efi/OC/Kexts/USBMap.kext) is used.
 
 ### Tools
 
-{CleanNvram,OpenControl,OpenShell,ResetSystem
-
 - OpenCore
   - `CleanNvram.efi` - Reset NVRAM alternative bundled as a standalone tool.
   - `OpenControl.efi` - Unlock and lock back NVRAM protection for other tools to be able to get full NVRAM access when launching from OpenCore.

@@ -29,9 +29,9 @@ Run `make lint test`.
 
 ## Manual testing
 
-To download all necessary packages and extract files to the `out/EFI` folder in the current directory
+To download all necessary packages and extract files to the `out/EFI` folder in the current directory, run the following commands.
 
-To generate EFI folder in `out/EFI`, run
+To generate an EFI folder in `out/EFI`, run:
 
 - DEBUG variant: `make debug`
 - RELEASE variant: `make release`
@@ -40,7 +40,7 @@ Once done, follow [replace placeholders](#replace-placeholders), mount EFI parti
 
 ## Replace placeholders
 
-Two things to be done manually before moving everything to actual EFI partition:
+Two things to be done manually before moving everything to the actual EFI partition:
 
 - Replace `{{ SERIAL }}`, `{{ BOARDSERIAL }}` and `{{ SMUUID }}` with actual values in `out/EFI/OC/config.plist`.
 

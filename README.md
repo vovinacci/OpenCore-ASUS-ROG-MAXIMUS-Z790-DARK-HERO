@@ -14,7 +14,8 @@ Currently running [macOS Sequoia](https://www.apple.com/macos/macos-sequoia/) `1
 
 ## Hardware
 
-Please refer to [hardware](docs/hardware.md) and [known issues](docs/known-issues.md).
+Please refer to [hardware](docs/hardware.md) for detailed component specifications and [known issues](docs/known-issues.md) for compatibility information and
+workarounds.
 
 ## Further details
 
