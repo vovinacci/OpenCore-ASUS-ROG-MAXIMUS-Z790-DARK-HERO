@@ -11,4 +11,8 @@ System is currently running on version [1801](https://dlcdnets.asus.com/pub/ASUS
 BIOS settings are based on Dortania
 [Comet Lake: Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#intel-bios-settings) recommendations
 
-TODO: Settings file and guidance.
+TODO:
+
+- Verify compatibility of Comet Lake BIOS settings with Z790 chipset
+- Document Z790-specific settings (Resizable BAR, Thunderbolt, Intel SGX/Platform Trust)
+- Settings file and guidance
