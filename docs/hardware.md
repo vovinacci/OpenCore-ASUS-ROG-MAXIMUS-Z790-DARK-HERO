@@ -1,0 +1,33 @@
+# Hardware
+
+Original hardware selection is based on CaseySJ's build:
+[Asus Z690 ProArt Creator WiFi (Thunderbolt 4) + i7-12700K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/asus-z690-proart-creator-wifi-thunderbolt-4-i7-12700k-amd-rx-6800-xt.318311/)
+
+| Type                      | Item                                                                                                                                                                                                                                                        |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Motherboard               | [Asus ROG MAXIMUS Z790 DARK HERO ATX LGA1700 Motherboard](https://pcpartpicker.com/product/PnXV3C/asus-rog-maximus-z790-dark-hero-atx-lga1700-motherboard-rog-maximus-z790-dark-hero)                                                                       |
+| CPU                       | [Intel Core i9-14900K 3.2 GHz 24-Core Processor](https://pcpartpicker.com/product/ZLjRsY/intel-core-i9-14900k-32-ghz-24-core-processor-bx8071514900k)                                                                                                       |
+| CPU Cooler                | [ARCTIC Liquid Freezer II 280 A-RGB 68.9 CFM Liquid CPU Cooler](https://pcpartpicker.com/product/HZvdnQ/arctic-liquid-freezer-ii-280-a-rgb-689-cfm-liquid-cpu-cooler-acfre00106a)                                                                           |
+| Memory                    | [G.Skill Trident Z5 RGB 96 GB (2 x 48 GB) DDR5-6400 CL32 Memory](https://pcpartpicker.com/product/VdxxFT/gskill-trident-z5-rgb-96-gb-2-x-48-gb-ddr5-6400-cl32-memory-f5-6400j3239f48gx2-tz5rw)                                                              |
+| Video Card                | [Asus TUF GAMING OC Radeon RX 6900 XT 16 GB Video Card](https://pcpartpicker.com/product/LRNgXL/asus-radeon-rx-6900-xt-16-gb-tuf-gaming-oc-video-card-tuf-rx6900xt-o16g-gaming)                                                                             |
+| Wi-Fi + Bluetooth Adapter | [fenvi FV-HB1200 802.11a/b/g/n/ac PCIe x1 Wi-Fi Adapter](https://pcpartpicker.com/product/bBFmP6/fenvi-fv-hb1200-80211abgnac-pcie-x1-wi-fi-adapter-fv-hb1200) - Wi-Fi not compatible, Bluetooth only. See [known issues](known-issues.md) for more details. |
+| HDD 1                     | [Western Digital Black SN850 2 TB M.2-2280 PCIe 4.0 X4 NVME Solid-State Drive](https://pcpartpicker.com/product/6LGnTW/western-digital-black-sn850-2-tb-m2-2280-nvme-solid-state-drive-wds200t1x0e)                                                         |
+| HDD 2                     | [Western Digital Black SN850 1 TB M.2-2280 PCIe 4.0 X4 NVME Solid-State Drive](https://pcpartpicker.com/product/W69tt6/western-digital-black-sn850-1-tb-m2-2280-nvme-solid-state-drive-wds100t1x0e)                                                         |
+| HDD 3                     | [Western Digital Red Plus 10 TB 3.5" 7200 RPM Internal Hard Drive](https://pcpartpicker.com/product/C9KKHx/western-digital-wd-red-plus-10-tb-35-7200rpm-internal-hard-drive-wd101efbx)                                                                      |
+| HDD 4                     | [KIOXIA BG5 256 GB M.2-2280 PCIe 4.0 X4 NVME Solid-State Drive](https://pcpartpicker.com/product/dPJp99/kioxia-bg5-256-gb-m2-2280-pcie-40-x4-nvme-solid-state-drive-kbg50znv256g)                                                                           |
+| Power Supply              | [EVGA SuperNOVA 850 G6 850 W 80+ Gold Certified Fully Modular ATX Power Supply](https://pcpartpicker.com/product/KqbTwP/evga-supernova-850-g6-850-w-80-gold-certified-fully-modular-atx-power-supply-220-g6-0850-x1)                                        |
+| Case                      | [Lian Li O11 Air Mini ATX Mid-Tower Case](https://pcpartpicker.com/product/RvNxFT/lian-li-o11-air-mini-atx-mid-tower-case-o11amx)                                                                                                                           |
+| Case Fan 1                | [be quiet! Light Wings PWM 56 CFM 140 mm Fans 3-Pack](https://pcpartpicker.com/product/QFpzK8/be-quiet-light-wings-pwm-56-cfm-140-mm-fans-3-pack-bl078)                                                                                                     |
+| Case Fan 2                | [be quiet! Light Wings PWM 41.51 CFM 120 mm Fan](https://pcpartpicker.com/product/HkRYcf/be-quiet-light-wings-pwm-4151-cfm-120-mm-fan-bl072)                                                                                                                |
+| Monitor                   | [Dell G3223Q 32.0" 3840 x 2160 144 Hz Monitor](https://pcpartpicker.com/product/qfwypg/dell-g3223q-320-3840-x-2160-144-hz-monitor-210-bdbk)                                                                                                                 |
+| Camera                    | [Logitech C920s HD Pro Webcam](https://pcpartpicker.com/product/2LgQzy/logitech-c920s-hd-pro-webcam-960-001257)                                                                                                                                             |
+| Keyboard                  | [Logitech MX KEYS S Wireless/Wired/Bluetooth Standard Keyboard](https://pcpartpicker.com/product/vvRwrH/logitech-mx-keys-s-wirelesswiredbluetooth-standard-keyboard-920-011406)                                                                             |
+| Mouse                     | [Logitech MX Anywhere 3S Bluetooth/Wireless/Wired Laser Mouse](https://pcpartpicker.com/product/3VP8TW/logitech-mx-anywhere-3s-bluetoothwirelesswired-laser-mouse-910-006925)                                                                               |
+
+View this build on [PCPartPicker](https://pcpartpicker.com/list/mrY8b2).
+
+Other
+
+| Type                      | Item                                                                                                                                                                                 |
+|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Wi-Fi to Ethernet Adapter | [BrosTrend AC1200 WiFi to Ethernet Adapter](https://www.amazon.com/BrosTrend-600Mbps-Adapter-Wireless-WNA016/dp/B0118SPFCK). See [known issues](./known-issues.md) for more details. |

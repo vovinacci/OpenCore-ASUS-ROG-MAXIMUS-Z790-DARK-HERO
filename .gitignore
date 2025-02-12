@@ -1,3 +1,6 @@
+## Project based ignores
+out
+
 ## Heavily simplified version of https://github.com/github/gitignore/blob/297239c101dcfdfae7e75757ed17ed993df0b4eb/Global/JetBrains.gitignore
 .idea
 
