@@ -1,20 +1,24 @@
 #!/usr/bin/env bash
-
-# Helper Functions
 #
-# Print error message to stderr and exit with status code 1.
+# This script provides basic logging functions with timestamps.
+# It must be sourced before build.env and build.sh.
+
+LOG_TS_FORMAT="+%Y-%m-%dT%H:%M:%S%z"
+readonly LOG_TS_FORMAT
+
+# Print an error message with a timestamp to stderr and exit.
 # Arguments:
-#   Error message
+#   Message(s) describing the error.
 function log_fail() {
-  echo >&2 "[$(date +'%Y-%m-%dT%H:%M:%S%z')] ERROR: $*"
+  echo >&2 "[$(date "${LOG_TS_FORMAT}")] ERROR: $*"
   exit 1
 }
 
-# Print an INFO-level log message with timestamp
+# Prints an informational message with a timestamp to stdout.
 # Arguments:
-#   Log message
+#   Message(s) to be logged.
 function log_info() {
-  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] INFO: $*"
+  echo "[$(date "${LOG_TS_FORMAT}")] INFO: $*"
 }
 
 # EOF
