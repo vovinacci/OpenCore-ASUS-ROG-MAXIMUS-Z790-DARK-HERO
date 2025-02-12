@@ -27,7 +27,7 @@ lint:  ## Run linters
 .PHONY: test
 test:  ## Run tests
 	$(PRINT_TARGET)
-	bats ${CI:--tap} --timing --jobs ${BATS_JOBS} .
+	bats --jobs ${BATS_JOBS} ${CI:--tap} --timing --verbose-run .
 
 .PHONY: release
 release:  ## Create RELEASE EFI variant
