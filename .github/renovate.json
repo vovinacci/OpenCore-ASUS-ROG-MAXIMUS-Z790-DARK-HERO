@@ -8,6 +8,9 @@
     ":semanticCommitTypeAll(fix)",
     ":semanticCommitScope(deps)"
   ],
+  "repositories": [
+    "vovinacci/OpenCore-ASUS-ROG-MAXIMUS-Z790-DARK-HERO"
+  ],
   "includePaths": [
     "build.env"
   ],
