@@ -28,7 +28,7 @@
     {
       "groupName": "all",
       "matchPackageNames": ["*"],
-      "extractVersion": "^v(?<version>.*)$"
+      "extractVersion": "^(?<version>.*)$"
     }
   ]
 }
