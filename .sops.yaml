@@ -1,3 +1,4 @@
 creation_rules:
   - path_regex: '^\.github/secrets.enc\.yml$'
-    pgp: ["A93B60E26C027DB0214AAA3BCDF53910DE24B917"]
+    pgp: >-
+      A93B60E26C027DB0214AAA3BCDF53910DE24B917
