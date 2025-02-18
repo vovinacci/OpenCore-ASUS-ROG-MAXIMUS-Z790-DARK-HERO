@@ -8,9 +8,6 @@
     ":semanticCommitTypeAll(fix)",
     ":semanticCommitScope(deps)"
   ],
-  "repositories": [
-    "vovinacci/OpenCore-ASUS-ROG-MAXIMUS-Z790-DARK-HERO"
-  ],
   "includePaths": [
     "build.env"
   ],
@@ -20,7 +17,7 @@
       "fileMatch": ["^build.env$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        "[A-Z]+_VERSION=\"(?<currentValue>.*)\"\\s*# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)?\\s"
+        "[A-Z_]+_VERSION=\"(?<currentValue>.*)\"\\s*# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)?\\s"
       ]
     }
   ],
