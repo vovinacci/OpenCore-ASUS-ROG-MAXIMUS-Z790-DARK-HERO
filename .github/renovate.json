@@ -1,0 +1,34 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    ":disableRateLimiting",
+    ":disableDependencyDashboard",
+    ":semanticCommitTypeAll(fix)",
+    ":semanticCommitScope(deps)"
+  ],
+  "repositories": [
+    "vovinacci/OpenCore-ASUS-ROG-MAXIMUS-Z790-DARK-HERO"
+  ],
+  "includePaths": [
+    "build.env"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^build.env$"],
+      "matchStringsStrategy": "any",
+      "matchStrings": [
+        "(?<depName>[A-Z_]+)_VERSION=\"(?<currentValue>.*?)\"\\s*# renovate: datasource=(?<datasource>[^\\s]+) depName=(?<depName>[^\\s]+)(?: versioning=(?<versioning>[^\\s]+))?"
+      ]
+    }
+  ],
+  "packageRules": [
+    {
+      "groupName": "all",
+      "matchPackageNames": ["*"],
+      "extractVersion": "^v(?<version>.*)$"
+    }
+  ]
+}
