@@ -20,7 +20,7 @@
       "fileMatch": ["^build.env$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        "(?<depName>[A-Z_]+)_VERSION=\"(?<currentValue>.*?)\"\\s*# renovate: datasource=(?<datasource>[^\\s]+) depName=(?<inlineDepName>[^\\s]+)(?: versioning=(?<versioning>[^\\s]+))?"
+        "[A-Z_]+_VERSION=\"(?<currentValue>.*)\"\\s+# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)?(?: versioning=(?<versioning>.+?))?\\s"
       ]
     }
   ],
@@ -28,7 +28,7 @@
     {
       "groupName": "all",
       "matchPackageNames": ["*"],
-      "extractVersion": "^v(?<version>.*)$"
+      "extractVersion": "^v?(?<version>.*)$"
     }
   ]
 }
