@@ -20,7 +20,7 @@
       "fileMatch": ["^build.env$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        "[A-Z_]+_VERSION=\"(?<currentValue>.*)\" # renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)?(?: versioning=(?<versioning>.+?))?\\s"
+        "[A-Z_]+_VERSION=\"(?<currentValue>.*)\"\\s+# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)?(?: versioning=(?<versioning>.+?))?\\s"
       ]
     }
   ],
