@@ -200,6 +200,8 @@ cp ${CP_OPTS} -r "${TMP_DIR}/VirtualSMC/Kexts/"{SMCProcessor.kext,SMCSuperIO.kex
 log_info "Copying hardware-specific items (ACPI, custom kexts, config.plist template)"
 cp ${CP_OPTS} -r "${BASE_DIR}/efi/OC/ACPI/"*.aml "${BUILD_DIR}/OC/ACPI/"
 cp ${CP_OPTS} -r "${BASE_DIR}/efi/OC/Kexts/"*.kext "${KEXTS_DIR}/"
+# TODO(vovinacci): Remove line below after placeholder replacement is implemented
+cp ${CP_OPTS} "${BASE_DIR}/efi/OC/config.plist.tmpl" "${BUILD_DIR}/OC/config.plist"
 
 # Download and install MemTest86.
 log_info "Download and copy MemTest86 to Tools folder"
@@ -209,12 +211,12 @@ download_and_copy_memtest
 # Example:
 # awk -v boardsn="$BOARDSERIAL" -v mac="$MACADDRESS" -v serial="$SERIAL" -v smuuid="$SMUUID" \
 # '{
-#   gsub("{{ BOARDSERIAL }}", boardsn);
-#   gsub("{{ MACADDRESS }}", mac);
-#   gsub("{{ SERIAL }}", serial);
-#   gsub("{{ SMUUID }}", smuuid);
+#   gsub(/{{ BOARDSERIAL }}/, boardsn);
+#   gsub(/{{ MACADDRESS }}/, mac);
+#   gsub(/{{ SERIAL }}/, serial);
+#   gsub(/{{ SMUUID }}/, smuuid);
 #   print;
-# }' "${BUILD_DIR}/OC/config.plist.tmpl" > "${BUILD_DIR}/OC/config.plist"
+# }' "${BASE_DIR}/efi/OC/config.plist.tmpl" > "${BUILD_DIR}/OC/config.plist"
 #
 # # Validate the OpenCore configuration.
 # log_info "Validating OpenCore ${OPENCORE_VERSION} configuration"

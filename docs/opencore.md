@@ -1,6 +1,6 @@
 # OpenCore configuration
 
-You may find a great installation guide [here](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/).
+Refer to [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/).
 
 - [Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 - [OpenCanopy](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)

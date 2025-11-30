@@ -44,8 +44,8 @@ Two things to be done manually before moving everything to the actual EFI partit
 
 - Replace `{{ SERIAL }}`, `{{ BOARDSERIAL }}` and `{{ SMUUID }}` with actual values in `out/EFI/OC/config.plist`.
 
-  If you don't have one, a great example of how to do this could be found
-  [here](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html).
+  If you don't have these values, a great example of how to do this can be found in Dortania's
+  [Fixing iMessage and other services with OpenCore](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html) guide.
 - Replace `{{ MACADDRESS }}` with the actual `en0` MAC address value in `out/EFI/OC/config.plist`.
 
-  Another great example on how to do it is [here](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#fixing-en0).
+  Another great example of how to do this is in the [Fixing en0](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#fixing-en0) guide.
