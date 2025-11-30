@@ -1,7 +1,7 @@
 repos:
   # Common
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-added-large-files
       - id: check-merge-conflict
@@ -15,7 +15,7 @@ repos:
           - "--markdown-linebreak-ext=md"
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.44.0
+    rev: v0.46.0
     hooks:
       - id: markdownlint
   # Shell linting and formatting
@@ -31,7 +31,7 @@ repos:
           - "-ci"
   # YAML linting
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.35.1
+    rev: v1.37.1
     hooks:
       - id: yamllint
         args:
