@@ -80,7 +80,9 @@ function download_and_unzip() {
   local -r dest="$2"
 
   log_info "Downloading: ${url}"
-  curl -LSs --fail-with-body "${url}" --output "${TMP_DIR}/archive.zip"
+  # Explicit User-Agent required: memtest86.com rejects requests with curl's default UA.
+  curl -LSs --fail-with-body -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36" \
+    "${url}" --output "${TMP_DIR}/archive.zip"
 
   log_info "Unzipping to: ${dest}"
   mkdir ${MKDIR_OPTS} -p "${dest}"
